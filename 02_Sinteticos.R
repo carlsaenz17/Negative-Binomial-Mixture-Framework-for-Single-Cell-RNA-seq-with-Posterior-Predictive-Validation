@@ -146,3 +146,14 @@ sf[sf <= 0] <- 1
 
 #Creacion de la matriz de conteos
 matrix_counts <- t(counts(cells))  # células × genes
+
+##Entrenamiento del modelo
+mixture <- NB_mixture_MAPEM(
+  y = matrix_counts,
+  size_factors = sf,
+  K = 30,
+  max_iter = 150,
+  block_size = 2000
+)
+
+#Sobre este punto hay algo relevante, hay que revisar cuidadosamente cual de las simulaciones se esta usando. 
