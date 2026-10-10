@@ -107,3 +107,5 @@ print(list(
   Trustworthiness  =trust#,
   Continuity       =cont
 ))
+
+#Esto ultimo se puede usar de mejor forma en la parte de los biologicos.
