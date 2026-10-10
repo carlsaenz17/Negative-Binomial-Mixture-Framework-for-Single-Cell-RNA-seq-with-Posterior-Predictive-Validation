@@ -163,3 +163,12 @@ sf <- sizeFactors(cells)
 
 ##Creacion de la matriz de conteos.
 matrix_counts <- as.matrix(t(counts(cells)))  # cells × genes
+
+##Entrenamiento del modelo
+mixture <- NB_mixture_MAPEM(
+  y = matrix_counts,
+  size_factors = sf,
+  K = 30,
+  max_iter = 150,
+  block_size = 2000
+)
